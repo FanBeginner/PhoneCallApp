@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@mipmap/im_bg_04"
+    tools:context=".phonecallui.PhoneCallActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_user_info"
+        android:layout_width="match_parent"
+        android:layout_height="300dp">
+
+        <TextView
+            android:id="@+id/tv_call_number_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tv_call_number"
+            android:gravity="center"
+            android:text="来电号码"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+
+        <TextView
+            android:id="@+id/tv_call_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="28sp"
+            tools:text="133-9527-9527" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <TextView
+            android:id="@+id/tv_phone_calling_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            android:text="通话中：01:33"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <TextView
+                android:id="@+id/tv_phone_hang_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="16dp"
+                android:drawableTop="@drawable/ic_phone_hang_up"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="挂  断"
+                android:textColor="@android:color/black"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tv_phone_pick_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_toRightOf="@id/tv_phone_hang_up"
+                android:drawablePadding="16dp"
+                android:drawableTop="@drawable/ic_phone_pick_up"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="接  听"
+                android:textColor="@android:color/black"
+                android:visibility="gone"
+                tools:visibility="visible" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="50dp"
+            android:onClick="openSpeaker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开启免提" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="100dp"
+            android:onClick="closeSpeaker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="关闭免提" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="200dp"
+            android:onClick="pauseCall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="暂停通话" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="300dp"
+            android:onClick="continueCall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="继续通话" />
+        <Button
+            android:id="@+id/button5"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="100dp"
+            android:onClick="silence"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="静音" />
+        <Button
+            android:id="@+id/button6"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="100dp"
+            android:onClick="cancelSilence"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="取消静音" />
+        <Button
+            android:id="@+id/button7"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="200dp"
+            android:onClick="recording"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="录音" />
+    </RelativeLayout>
+</LinearLayout>
